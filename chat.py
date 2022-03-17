@@ -5,7 +5,7 @@ import sys
 import requests
 from time import sleep
 import praw
-TOKEN = 'OTUzOTQzNjQyMTY5NTQwNjU4.YjL7Pw.YpKlqk_tM0B02plnt9CLwDM80Mw'
+TOKEN = 'OTUzOTQzNjQyMTY5NTQwNjU4.YjL7Pw.YjP3hMMHpmI64b0qcjsr5wlwrSY'
 SUB = 'https://www.reddit.com/r/worldnews/comments/'
 
 
