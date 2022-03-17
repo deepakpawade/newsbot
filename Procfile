@@ -1,3 +1,3 @@
-web: python YOURSCRIPTNAME.py
+web: python chat.py
 
-worker: python YOURSCRIPTNAME.py 
+worker: python chat.py 
