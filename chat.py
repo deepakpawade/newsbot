@@ -14,6 +14,10 @@ SUB = 'https://www.reddit.com/r/worldnews/comments/'
 client = discord.Client()
 
 
+# The on_ready function prints a message to the console indicating that the bot has started, 
+# and the on_message function is triggered every time a message is sent in the Discord server. 
+# The function processes the incoming message and based on the content, it either sends a response back to the General channel or
+# posts news links from r/worldnews. 
 
 @client.event
 async def on_ready():
@@ -42,14 +46,20 @@ async def on_message(message):
         elif user_message.lower() == 'bye':
             await message.channel.send(f'bye {username}')
             return
+        
+#         The !random command returns a random number to the user
         elif user_message.lower() == '!random':
             response = f'This is your random number :{random.randrange(1000000)}'
             await message.channel.send(response)
             return
 
+#         !anywhere command can be used from any channel in the Discord server
     if user_message.lower() == '!anywhere':
         await message.channel.send('This can be used anywhere')
         return
+    
+#     using the requests library to get the latest posts from the subreddit, 
+#     and checking if the post link is different from the previous one before posting it to the Discord channel.
     if user_message.lower() == '!news':
          while(1):
             sleep(10)
